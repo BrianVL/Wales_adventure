@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wales Avonturenreis — Juli 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1a3a2a;
+    --moss: #2d5a3d;
+    --sage: #4a7c5f;
+    --fern: #6ba585;
+    --mist: #c8ddd1;
+    --cream: #f5f0e8;
+    --parchment: #ede5d4;
+    --stone: #8a7d6b;
+    --slate: #4a5568;
+    --gold: #c9a84c;
+    --amber: #e8c46a;
+    --red: #8b2c2c;
+    --sky: #b8cfe0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--forest);
+    font-family: 'Crimson Pro', serif;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  /* HEADER */
+  .header {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 60px 40px 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: 
+      radial-gradient(ellipse at 20% 50%, rgba(74,124,95,0.3) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(45,90,61,0.4) 0%, transparent 50%);
+  }
+
+  .header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--fern);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .header-tag::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: var(--fern);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 7vw, 72px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  h1 span {
+    color: var(--amber);
+    font-style: italic;
+  }
+
+  .header-subtitle {
+    font-family: 'Crimson Pro', serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--mist);
+    font-style: italic;
+    margin-bottom: 32px;
+  }
+
+  .header-meta {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .meta-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--fern);
+  }
+
+  .meta-value {
+    font-family: 'Crimson Pro', serif;
+    font-size: 16px;
+    color: var(--cream);
+    font-weight: 600;
+  }
+
+  /* MAIN CONTENT */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* SECTION HEADERS */
+  .section {
+    margin: 60px 0;
+  }
+
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--mist);
+  }
+
+  /* DAY CARDS */
+  .day-card {
+    background: white;
+    border-radius: 2px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(26,58,42,0.08);
+    border-left: 5px solid var(--sage);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .day-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(26,58,42,0.12);
+  }
+
+  .day-card.day1 { border-left-color: var(--sky); }
+  .day-card.day2 { border-left-color: var(--sage); }
+  .day-card.day3 { border-left-color: var(--gold); }
+  .day-card.day4 { border-left-color: var(--moss); }
+  .day-card.day5 { border-left-color: var(--red); }
+
+  .day-header {
+    padding: 20px 28px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 1px solid var(--parchment);
+  }
+
+  .day-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--mist);
+    min-width: 50px;
+  }
+
+  .day-card.day1 .day-number { color: #d0e4f0; }
+  .day-card.day2 .day-number { color: #c5d9cc; }
+  .day-card.day3 .day-number { color: #f0e2bb; }
+  .day-card.day4 .day-number { color: #b8d4c0; }
+  .day-card.day5 .day-number { color: #e8c5c5; }
+
+  .day-title-block { flex: 1; }
+
+  .day-date {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 4px;
+  }
+
+  .day-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--forest);
+    line-height: 1.2;
+  }
+
+  .day-emoji { font-size: 22px; margin-top: 2px; }
+
+  .day-body { padding: 20px 28px 24px; }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: var(--mist);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 14px;
+    padding-left: 20px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--sage);
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--sage);
+  }
+
+  .timeline-time {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--stone);
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+
+  .timeline-text {
+    font-size: 16px;
+    color: var(--slate);
+    line-height: 1.5;
+  }
+
+  .timeline-text strong {
+    color: var(--forest);
+    font-weight: 600;
+  }
+
+  /* TIPS */
+  .tips-box {
+    background: var(--parchment);
+    border-radius: 2px;
+    padding: 16px 20px;
+    margin-top: 16px;
+  }
+
+  .tips-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 8px;
+  }
+
+  .tips-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .tips-list li {
+    font-size: 15px;
+    color: var(--slate);
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .tips-list li::before {
+    content: '→';
+    color: var(--gold);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* HOTELS SECTION */
+  .hotels-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 650px) {
+    .hotels-grid { grid-template-columns: 1fr; }
+  }
+
+  .hotel-card {
+    background: white;
+    border-radius: 2px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(26,58,42,0.08);
+    border-top: 4px solid var(--sage);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .hotel-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26,58,42,0.12);
+  }
+
+  .hotel-card.recommended {
+    border-top-color: var(--gold);
+    background: linear-gradient(135deg, #fff 85%, #fdf8ee);
+  }
+
+  .hotel-night-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 8px;
+  }
+
+  .hotel-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+
+  .hotel-location {
+    font-size: 14px;
+    color: var(--stone);
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+
+  .hotel-stars {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  .hotel-rating {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--moss);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .hotel-price {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: var(--forest);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .hotel-description {
+    font-size: 14px;
+    color: var(--slate);
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+
+  .hotel-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--moss);
+    text-decoration: none;
+    border-bottom: 1px solid var(--mist);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .hotel-link:hover {
+    color: var(--forest);
+    border-color: var(--forest);
+  }
+
+  .recommended-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--forest);
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  /* BIKE SECTION */
+  .bike-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 650px) {
+    .bike-grid { grid-template-columns: 1fr; }
+  }
+
+  .bike-card {
+    background: white;
+    border-radius: 2px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(26,58,42,0.08);
+    border-left: 4px solid var(--moss);
+    transition: transform 0.2s;
+  }
+
+  .bike-card:hover { transform: translateY(-2px); }
+
+  .bike-card.top-pick {
+    border-left-color: var(--gold);
+    background: linear-gradient(135deg, #fff 85%, #fdf8ee);
+  }
+
+  .bike-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 4px;
+  }
+
+  .bike-location {
+    font-size: 13px;
+    color: var(--stone);
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+
+  .bike-detail {
+    font-size: 14px;
+    color: var(--slate);
+    margin-bottom: 6px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .bike-detail-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--stone);
+    min-width: 65px;
+    padding-top: 3px;
+  }
+
+  .bike-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--moss);
+    text-decoration: none;
+    border-bottom: 1px solid var(--mist);
+    padding-bottom: 2px;
+    margin-top: 10px;
+    transition: color 0.2s;
+  }
+
+  .bike-link:hover { color: var(--forest); border-color: var(--forest); }
+
+  .open-badge {
+    display: inline-block;
+    background: #d4edda;
+    color: #1a5c2a;
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+  }
+
+  .closed-badge {
+    background: #fce8e8;
+    color: #7a1a1a;
+  }
+
+  /* CHECKLIST */
+  .checklist {
+    background: var(--forest);
+    color: var(--cream);
+    border-radius: 2px;
+    padding: 32px 36px;
+    margin: 60px 0;
+  }
+
+  .checklist-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--amber);
+  }
+
+  .checklist-sub {
+    font-size: 15px;
+    color: var(--mist);
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  @media (max-width: 600px) {
+    .checklist-grid { grid-template-columns: 1fr; }
+  }
+
+  .checklist-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 2px;
+    border: 1px solid rgba(200,221,209,0.1);
+  }
+
+  .checklist-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .checklist-text {
+    flex: 1;
+  }
+
+  .checklist-action {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 2px;
+  }
+
+  .checklist-detail {
+    font-size: 13px;
+    color: var(--mist);
+    line-height: 1.4;
+  }
+
+  /* PACKING */
+  .packing-section {
+    background: var(--parchment);
+    border-radius: 2px;
+    padding: 32px 36px;
+    margin-bottom: 60px;
+  }
+
+  .packing-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 20px;
+  }
+
+  .packing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 650px) {
+    .packing-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .packing-group-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--mist);
+  }
+
+  .packing-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .packing-list li {
+    font-size: 14px;
+    color: var(--slate);
+    display: flex;
+    gap: 6px;
+  }
+
+  .packing-list li::before {
+    content: '·';
+    color: var(--fern);
+    font-weight: 700;
+  }
+
+  /* DIVIDER */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 48px 0 32px;
+  }
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--mist);
+  }
+
+  .divider-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--stone);
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--forest);
+    color: var(--mist);
+    text-align: center;
+    padding: 32px 40px;
+    font-size: 13px;
+    font-style: italic;
+  }
+
+  .footer strong {
+    color: var(--amber);
+    font-style: normal;
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* DISTANCE BADGES */
+  .distance-badge {
+    display: inline-block;
+    background: var(--mist);
+    color: var(--forest);
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    font-weight: 700;
+  }
+
+  /* PRINT */
+  @media print {
+    .day-card:hover, .hotel-card:hover, .bike-card:hover { transform: none; box-shadow: none; }
+    body { font-size: 14px; }
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 20px; }
+    .header { padding: 40px 20px 36px; }
+    .day-body, .day-header { padding: 16px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <div class="header-tag">Reisplanning · Wales · 2025</div>
+    <h1>Avontuur in <span>Wales</span></h1>
+    <p class="header-subtitle">Bergen, bossen, kastelen & mountainbikes</p>
+    <div class="header-meta">
+      <div class="meta-item">
+        <span class="meta-label">Vertrek</span>
+        <span class="meta-value">Zondag 26 juli</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Terugkomst</span>
+        <span class="meta-value">Donderdag 30 juli</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Duur</span>
+        <span class="meta-value">5 dagen</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Vertrekpunt</span>
+        <span class="meta-value">Gullegem, België</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- DAGPLANNING -->
+  <div class="section">
+    <div class="section-label">Dag per dag</div>
+    <div class="section-title">De Route</div>
+
+    <!-- DAG 1 -->
+    <div class="day-card day1">
+      <div class="day-header">
+        <div class="day-number">01</div>
+        <div class="day-title-block">
+          <div class="day-date">Zondag 26 juli</div>
+          <div class="day-title">Reisdag — Gullegem → Betws-y-Coed</div>
+        </div>
+        <div class="day-emoji">🚗</div>
+      </div>
+      <div class="day-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">09:00</div>
+            <div class="timeline-text"><strong>Vertrek</strong> vanuit Lommergoed 53, Gullegem</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">±10:30</div>
+            <div class="timeline-text"><strong>Eurotunnel</strong> in Calais/Coquelles — boek tijdslot op voorhand via eurotunnel.com. Oversteek duurt 35 min.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">±11:15</div>
+            <div class="timeline-text"><strong>Folkestone</strong> — rijd noordwaarts via M20 → M25 → M40 → A5 → A470 naar Noord-Wales</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">±18:00</div>
+            <div class="timeline-text"><strong>Aankomst Betws-y-Coed</strong> — inchecken, diner in het dorp (bv. The Bistro of Ty Gwyn Hotel)</div>
+          </div>
+        </div>
+        <div class="tips-box">
+          <div class="tips-label">Tips voor de reis</div>
+          <ul class="tips-list">
+            <li>Boek de Eurotunnel op voorhand — in juli volgeboekt aan populaire tijdstippen</li>
+            <li>Rij via de M6 en A5 i.p.v. M6 Toll om files te vermijden</li>
+            <li>Tankstop aanbevolen in Engeland — goedkoper dan in Wales</li>
+            <li>Totale afstand: ±700 km · Rijduur: ±7-8 uur (excl. stops)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAG 2 -->
+    <div class="day-card day2">
+      <div class="day-header">
+        <div class="day-number">02</div>
+        <div class="day-title-block">
+          <div class="day-date">Maandag 27 juli</div>
+          <div class="day-title">Snowdon beklimming + Fairy Glen</div>
+        </div>
+        <div class="day-emoji">🏔️</div>
+      </div>
+      <div class="day-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">07:00</div>
+            <div class="timeline-text"><strong>Vroeg ontbijt</strong> — vertrek voor 7:30u vanuit de B&B</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">07:45</div>
+            <div class="timeline-text"><strong>Pen y Pass</strong> <span class="distance-badge">30 min rijden</span> — start Pyg Track. Parking vooraf boeken via JustPark (code: LL55 4NW) · £10-15/dag</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">08:00 – 15:30</div>
+            <div class="timeline-text"><strong>Pyg Track retour</strong> — 11 km · ±700m hoogteverschil · 6-7 uur · moeilijkheidsgraad: matig-zwaar</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">±16:30</div>
+            <div class="timeline-text"><strong>Terug in Betws-y-Coed</strong> — kort bezoek <strong>Fairy Glen</strong> (£1 pp via honesty box) als energie het toelaat. Daglicht tot ±21u in juli!</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">±19:00</div>
+            <div class="timeline-text"><strong>Diner & rust</strong> — welverdiend na de klim!</div>
+          </div>
+        </div>
+        <div class="tips-box">
+          <div class="tips-label">Tips voor Snowdon</div>
+          <ul class="tips-list">
+            <li>Vertrek VOOR 8u — parkeerplaats is beperkt en raakt snel vol</li>
+            <li>Neem minstens 2L water en lunch mee</li>
+            <li>Weerbestendige regenjas is essentieel, ook bij zonnig begin</li>
+            <li>Pyg Track: korter maar steiler dan de Miners' Track, spectaculaire bergkammen</li>
+            <li>De Fairy Glen heeft steile, natte rotstreden — goede schoenen zijn een must</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAG 3 -->
+    <div class="day-card day3">
+      <div class="day-header">
+        <div class="day-number">03</div>
+        <div class="day-title-block">
+          <div class="day-date">Dinsdag 28 juli</div>
+          <div class="day-title">Carreg Cennen Castle → Pen y Fan → Afan</div>
+        </div>
+        <div class="day-emoji">🏰⛰️</div>
+      </div>
+      <div class="day-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">08:30</div>
+            <div class="timeline-text"><strong>Vertrek</strong> vanuit Betws-y-Coed richting zuiden via A470</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">±11:00</div>
+            <div class="timeline-text"><strong>Carreg Cennen Castle</strong> <span class="distance-badge">2,5u rijden</span> — open 9:30u · £8/pp · Reken 1,5-2u. Vergeet de grotten onder het kasteel niet! Heerlijk café aan de voet.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">±13:30</div>
+            <div class="timeline-text"><strong>Vertrek naar Pen y Fan</strong> <span class="distance-badge">45 min rijden</span></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">±14:15 – 17:30</div>
+            <div class="timeline-text"><strong>Pen y Fan</strong> via Pont ar Daf — parkeren £7,50/dag · 9 km retour · 3-3,5u · hoogste top van Zuid-Wales (886m)</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">±18:30</div>
+            <div class="timeline-text"><strong>Afan Mountain Lodge</strong> <span class="distance-badge">1u rijden</span> — inchecken, diner in het restaurant van de lodge</div>
+          </div>
+        </div>
+        <div class="tips-box">
+          <div class="tips-label">Tips voor dag 3</div>
+          <ul class="tips-list">
+            <li>Reserveer Carreg Cennen tickets online via carregcennencastle.com</li>
+            <li>Pen y Fan: Pont ar Daf is dichter dan de noordelijke parkeerplaats — directere route</li>
+            <li>Dag 3 is het langst in de auto (~4u rijden) — plan lunchstop in Llandovery of Brecon</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAG 4 -->
+    <div class="day-card day4">
+      <div class="day-header">
+        <div class="day-number">04</div>
+        <div class="day-title-block">
+          <div class="day-date">Woensdag 29 juli</div>
+          <div class="day-title">Mountainbiken in Afan Forest Park</div>
+        </div>
+        <div class="day-emoji">🚵</div>
+      </div>
+      <div class="day-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">08:30</div>
+            <div class="timeline-text"><strong>Ontbijt</strong> in Afan Mountain Lodge</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">09:00</div>
+            <div class="timeline-text"><strong>Fietsverhuur</strong> bij Afan Valley Bike Shed — check-in & fietsuitleg · gewone & elektrische MTB beschikbaar · <strong>Op woensdag open!</strong></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">09:30 – 15:00</div>
+            <div class="timeline-text"><strong>Mountainbike trails</strong> — kies route op basis van conditie (zie kleurcode hieronder). Lunch in het Visitor Centre café.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">±15:30</div>
+            <div class="timeline-text"><strong>Fietsen inleveren</strong> — welverdiende douche & koffie</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">Avond</div>
+            <div class="timeline-text"><strong>Diner & afscheidspintje</strong> aan de bar van Afan Mountain Lodge</div>
+          </div>
+        </div>
+        <div class="tips-box">
+          <div class="tips-label">Trails in Afan Forest</div>
+          <ul class="tips-list">
+            <li><strong>Blauw (beginner):</strong> Penhydd Trail — 19 km · 2-3u · mooie afdaling met watervalletjes</li>
+            <li><strong>Rood (gevorderd):</strong> The Wall — 46 km · 4-5u · epic trail voor ervaren rijders</li>
+            <li><strong>E-bike aanbevolen</strong> voor de lange, aanhoudende klimmen — 20% minder vermoeid, 100% meer plezier</li>
+            <li>Bel vooraf voor reservatie: <strong>+44 1639 850800</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAG 5 -->
+    <div class="day-card day5">
+      <div class="day-header">
+        <div class="day-number">05</div>
+        <div class="day-title-block">
+          <div class="day-date">Donderdag 30 juli</div>
+          <div class="day-title">Castell Coch → Terugreis Gullegem</div>
+        </div>
+        <div class="day-emoji">🏰🏠</div>
+      </div>
+      <div class="day-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">08:00</div>
+            <div class="timeline-text"><strong>Vroeg ontbijt & checkout</strong> uit Afan Mountain Lodge</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">08:45 – 10:00</div>
+            <div class="timeline-text"><strong>Castell Coch</strong> <span class="distance-badge">40 min rijden</span> — sprookjeskasteel bij Cardiff, open 9:30u · £10/pp · 1-1,5u bezoek · adembenemende gotische interieurs</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">±11:30</div>
+            <div class="timeline-text"><strong>Vertrek via M4 → M25 → M20</strong> richting Folkestone</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">±15:30</div>
+            <div class="timeline-text"><strong>Eurotunnel Folkestone</strong> — oversteek naar Calais (35 min)</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">±20:00</div>
+            <div class="timeline-text"><strong>Thuiskomst</strong> in Gullegem 🎉</div>
+          </div>
+        </div>
+        <div class="tips-box">
+          <div class="tips-label">Tips voor de terugreis</div>
+          <ul class="tips-list">
+            <li>Boek de Eurotunnel ook voor de terugweg op voorhand</li>
+            <li>Rij via M4 (vermijd het centrum van Cardiff)</li>
+            <li>Files mogelijk op M25 rond Londen — vertrek niet te laat uit Cardiff</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOTELS -->
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-text">Overnachtingen</div>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Nachten 1 & 2 — Betws-y-Coed</div>
+    <div class="section-title">Hotels & B&Bs</div>
+
+    <div class="hotels-grid">
+
+      <div class="hotel-card recommended">
+        <div class="recommended-badge">⭐ Top Aanbeveling</div>
+        <div class="hotel-night-tag">Nacht 1 & 2 · Betws-y-Coed</div>
+        <div class="hotel-name">Afon Gwyn Country House</div>
+        <div class="hotel-location">Betws-y-Coed, LL24 — vlak naast Fairy Glen</div>
+        <div class="hotel-stars">★★★★★</div>
+        <div class="hotel-rating">5.0 / 5 · 64 beoordelingen</div>
+        <div class="hotel-price">~€90-110 / nacht</div>
+        <div class="hotel-description">Letterlijk op 2 minuten wandelen van de Fairy Glen. Hosts Gareth en Rana ontvangen gasten met zelfgemaakte yoghurt en Belgische wafels. Ruime, luxueuze kamers met geweldig uitzicht op de bergen.</div>
+        <a href="http://www.snowdoniabedbreakfast.co.uk" target="_blank" class="hotel-link">↗ snowdoniabedbreakfast.co.uk</a>
+      </div>
+
+      <div class="hotel-card recommended">
+        <div class="recommended-badge">⭐ Perfecte Score</div>
+        <div class="hotel-night-tag">Nacht 1 & 2 · Betws-y-Coed</div>
+        <div class="hotel-name">Aberconwy House</div>
+        <div class="hotel-location">Betws-y-Coed, LL24 — 10 min van Fairy Glen</div>
+        <div class="hotel-stars">★★★★★</div>
+        <div class="hotel-rating">5.0 / 5 · 249 beoordelingen</div>
+        <div class="hotel-price">~€100-120 / nacht</div>
+        <div class="hotel-description">De meest beoordeelde B&B van de regio. Hosts Martin en Pippa geven persoonlijk wandeladvies, serveren lokaal ontbijt en trakteren gasten op Welsh cakes bij vertrek.</div>
+        <a href="http://www.aberconwy-house.co.uk" target="_blank" class="hotel-link">↗ aberconwy-house.co.uk</a>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-night-tag">Nacht 1 & 2 · Betws-y-Coed</div>
+        <div class="hotel-name">Pengwern Country House</div>
+        <div class="hotel-location">Betws-y-Coed — op wandelafstand Fairy Glen</div>
+        <div class="hotel-stars">★★★★</div>
+        <div class="hotel-rating">4.4 / 5 · 16 beoordelingen</div>
+        <div class="hotel-price">~€80-100 / nacht</div>
+        <div class="hotel-description">Victoriaans landhuis met prachtig uitzicht over de vallei. Gastvrouw Gwawr geeft persoonlijke wandeltips. Ideaal voor wie rust en karakter zoekt.</div>
+        <a href="http://www.snowdoniaaccommodation.co.uk" target="_blank" class="hotel-link">↗ snowdoniaaccommodation.co.uk</a>
+      </div>
+
+      <div class="hotel-card recommended">
+        <div class="recommended-badge">🚵 Wandelaars Favoriet</div>
+        <div class="hotel-night-tag">Nacht 3 & 4 · Afan Valley</div>
+        <div class="hotel-name">Afan Mountain Lodge</div>
+        <div class="hotel-location">Afan Rd, Duffryn Rhondda, Port Talbot</div>
+        <div class="hotel-stars">★★★★</div>
+        <div class="hotel-rating">4.6 / 5 · 648 beoordelingen</div>
+        <div class="hotel-price">~€80-100 / nacht</div>
+        <div class="hotel-description">Lodge midden in de Afan-vallei op wandelafstand van de trails. Bar, restaurant, heerlijk ontbijt en prachtig uitzicht. Hondvriendelijk. Perfect uitvalsbasis voor dag 3 & 4.</div>
+        <a href="http://www.afanmountainlodge.co.uk" target="_blank" class="hotel-link">↗ afanmountainlodge.co.uk</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FIETSVERHUUR -->
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-text">Fietsverhuur</div>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Woensdag 29 juli · Afan Forest Park</div>
+    <div class="section-title">Mountainbike Verhuur</div>
+
+    <div class="bike-grid">
+
+      <div class="bike-card top-pick">
+        <div class="recommended-badge">⭐ Beste Keuze · Wo open</div>
+        <div class="open-badge">✓ Open op woensdag 29/07</div>
+        <div class="bike-name">Afan Valley Bike Shed</div>
+        <div class="bike-location">Argoed Country Park, Cynonville, SA13 3HG</div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Rating</span>
+          <span>⭐ 4.8 / 5 · 98 beoordelingen</span>
+        </div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Fietsen</span>
+          <span>Hardtail & full-suspension MTB + elektrische MTB</span>
+        </div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Uren</span>
+          <span>Wo-Ma 9:00-17:00 · Di gesloten</span>
+        </div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Telefoon</span>
+          <span>+44 1639 850800</span>
+        </div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Tip</span>
+          <span>Bel op voorhand — dag verhuur kan snel vol zijn in zomer</span>
+        </div>
+        <a href="http://www.afanvalleybikeshed.co.uk" target="_blank" class="bike-link">↗ afanvalleybikeshed.co.uk</a>
+      </div>
+
+      <div class="bike-card">
+        <div class="open-badge">✓ Open op woensdag 29/07</div>
+        <div class="bike-name">Afan A Blast</div>
+        <div class="bike-location">Glyncorrwg Mountainbike Centre, SA13 3EA</div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Rating</span>
+          <span>⭐ 4.9 / 5 · 48 beoordelingen</span>
+        </div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Fietsen</span>
+          <span>MTB verhuur + reparatie, lokale trailkennis</span>
+        </div>
+        <div class="bike-detail">
+            <span class="bike-detail-label">Uren</span>
+            <span>Wo-Zo 9:00-17:00 · Ma-Di gesloten</span>
+        </div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Telefoon</span>
+          <span>+44 1639 699802</span>
+        </div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Tip</span>
+          <span>Familiaire sfeer, hosts Jeff & Gwawr geven gratis trailadvies</span>
+        </div>
+        <a href="https://www.facebook.com/AfanABlast" target="_blank" class="bike-link">↗ facebook.com/AfanABlast</a>
+      </div>
+
+      <div class="bike-card">
+        <div class="open-badge">✓ Trails open 24/7</div>
+        <div class="bike-name">Afan Bike Park</div>
+        <div class="bike-location">Port Talbot SA12 9SP — alternatief trailgebied</div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Rating</span>
+          <span>⭐ 4.8 / 5 · 214 beoordelingen</span>
+        </div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Fietsen</span>
+          <span>Geen eigen verhuur — gebruik eigen fiets of van Bike Shed</span>
+        </div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Trails</span>
+          <span>Hard tail, full-sus & e-bike trails · groot terrein</span>
+        </div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Tip</span>
+          <span>Ideaal voor beginners — e-bike aangeraden door locals</span>
+        </div>
+        <a href="https://www.komoot.com/guide/afan-bike-park" target="_blank" class="bike-link">↗ Trailinfo via Komoot</a>
+      </div>
+
+      <div class="bike-card">
+        <div class="open-badge">✓ Trails open 7:00-19:00</div>
+        <div class="bike-name">Afan Forest Visitor Centre</div>
+        <div class="bike-location">Port Talbot SA13 3HG — start alle trails</div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Rating</span>
+          <span>⭐ 4.7 / 5 · 1033 beoordelingen</span>
+        </div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Routes</span>
+          <span>Blauw (Penhydd 19km) · Rood (The Wall 46km)</span>
+        </div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Faciliteiten</span>
+          <span>Café, toiletten, douches, fietswasgelegenheid</span>
+        </div>
+        <div class="bike-detail">
+          <span class="bike-detail-label">Tip</span>
+          <span>Haal gratis trailkaart op aan het Visitor Centre</span>
+        </div>
+        <a href="https://naturalresources.wales/days-out/places-to-visit/south-west-wales/afan-forest-park-visitor-centre" target="_blank" class="bike-link">↗ naturalresources.wales</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CHECKLIST -->
+  <div class="checklist">
+    <div class="checklist-title">To-Do voor Vertrek</div>
+    <p class="checklist-sub">Zorg dat dit allemaal geregeld is voor 26 juli</p>
+    <div class="checklist-grid">
+      <div class="checklist-item">
+        <div class="checklist-icon">🏨</div>
+        <div class="checklist-text">
+          <div class="checklist-action">B&B boeken — Betws-y-Coed</div>
+          <div class="checklist-detail">2 nachten (26-28 juli) · Afon Gwyn of Aberconwy House</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-icon">🏨</div>
+        <div class="checklist-text">
+          <div class="checklist-action">Hotel boeken — Afan Valley</div>
+          <div class="checklist-detail">2 nachten (28-30 juli) · Afan Mountain Lodge</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-icon">🚂</div>
+        <div class="checklist-text">
+          <div class="checklist-action">Eurotunnel boeken</div>
+          <div class="checklist-detail">Heen (26/07) + terug (30/07) · eurotunnel.com</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-icon">🅿️</div>
+        <div class="checklist-text">
+          <div class="checklist-action">Pen y Pass parking reserveren</div>
+          <div class="checklist-detail">Ma 27 juli · JustPark app · LL55 4NW · voor 07:30u</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-icon">🚵</div>
+        <div class="checklist-text">
+          <div class="checklist-action">Fietsen reserveren</div>
+          <div class="checklist-detail">Wo 29 juli · Afan Valley Bike Shed · +44 1639 850800</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-icon">🏰</div>
+        <div class="checklist-text">
+          <div class="checklist-action">Carreg Cennen tickets</div>
+          <div class="checklist-detail">Di 28 juli · carregcennencastle.com · open 9:30u</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-icon">🏰</div>
+        <div class="checklist-text">
+          <div class="checklist-action">Castell Coch tickets</div>
+          <div class="checklist-detail">Do 30 juli · cadw.gov.wales · open 9:30u</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-icon">🏥</div>
+        <div class="checklist-text">
+          <div class="checklist-action">Reisverzekering controleren</div>
+          <div class="checklist-detail">Incl. bergsport & mountainbiken · EHIC-kaart meenemen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PACKING -->
+  <div class="packing-section">
+    <div class="packing-title">🎒 Wat meenemen?</div>
+    <div class="packing-grid">
+      <div>
+        <div class="packing-group-title">Wandelen</div>
+        <ul class="packing-list">
+          <li>Stevige wandelschoenen (waterdicht)</li>
+          <li>Regenjas & lichte fleece</li>
+          <li>Wandelstokken (optioneel)</li>
+          <li>Rugzak (20-30L)</li>
+          <li>2L water per persoon</li>
+          <li>Energierepen & lunch</li>
+          <li>Zonnecrème & zonnebril</li>
+          <li>Hoofdlamp (voor Fairy Glen)</li>
+        </ul>
+      </div>
+      <div>
+        <div class="packing-group-title">Mountainbiken</div>
+        <ul class="packing-list">
+          <li>Fietshelm (verplicht)</li>
+          <li>Handschoenen</li>
+          <li>Bril / zonnebril</li>
+          <li>Korte fietsbroek of lange broek</li>
+          <li>Kniebeschermers (optioneel)</li>
+          <li>Extra kledij in rugzak</li>
+          <li>Kledij die vuil mag worden</li>
+        </ul>
+      </div>
+      <div>
+        <div class="packing-group-title">Algemeen</div>
+        <ul class="packing-list">
+          <li>Paspoort / ID-kaart</li>
+          <li>EHIC-kaart</li>
+          <li>Britse pond & bankkaart</li>
+          <li>Lader & powerbank</li>
+          <li>Offline kaarten (Maps.me)</li>
+          <li>Klein EHBO-kit</li>
+          <li>Munten voor honesty boxes</li>
+          <li>Verandering voor parking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p><strong>Wales Avonturenreis · 26-30 juli 2025</strong></p>
+  <p style="margin-top:8px;">Gullegem → Betws-y-Coed → Afan Forest → Gullegem · ±1.600 km totaal</p>
+  <p style="margin-top: 6px; font-size: 12px; opacity: 0.6;">Gepland met Claude · Prijzen zijn schattingen en kunnen afwijken · Altijd zelf controleren voor vertrek</p>
+</div>
+
+</body>
+</html>
